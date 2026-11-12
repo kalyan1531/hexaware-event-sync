@@ -1,0 +1,16 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f5f7fa; color: #142439; font: 16px/1.5 system-ui, sans-serif; }
+main { max-width: 920px; margin: auto; padding: 2rem 1rem; }
+h1 { margin: 0; font-size: 2.2rem; }
+h2 { font-size: 1rem; }
+#meetings { margin-top: 1rem; display: grid; gap: .5rem; }
+details { border: 1px solid #cbd5e1; border-radius: .5rem; background: white; padding: .75rem 1rem; }
+details details { margin: .5rem 0; background: #f8fafc; }
+summary { cursor: pointer; }
+summary span { display: block; padding-left: 1.15rem; color: #45566b; font-size: .875rem; }
+table { width: 100%; border-collapse: collapse; text-align: left; table-layout: fixed; overflow-wrap: anywhere; }
+td, th { border-bottom: 1px solid #cbd5e1; padding: .35rem; vertical-align: top; }
+dl { display: grid; grid-template-columns: minmax(6rem, 1fr) 3fr; gap: .3rem .75rem; }
+dt, td:first-child { text-transform: capitalize; }
+dd { margin: 0; overflow-wrap: anywhere; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; }
