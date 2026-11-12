@@ -14,3 +14,105 @@ dl { display: grid; grid-template-columns: minmax(6rem, 1fr) 3fr; gap: .3rem .75
 dt, td:first-child { text-transform: capitalize; }
 dd { margin: 0; overflow-wrap: anywhere; }
 pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+
+/* Step 1: give the page title a distinct header. */
+h1 {
+  padding: 1.2rem clamp(1rem, 4vw, 2.25rem);
+  border-radius: 1rem;
+  background: linear-gradient(115deg, #142b3a, #075e55);
+  color: #fff;
+  letter-spacing: -.035em;
+}
+
+/* Give the meeting list a clear card layout. */
+#meetings {
+  gap: .75rem;
+}
+
+#meetings > details {
+  padding: 0;
+  border-color: #d6e1e4;
+  border-radius: .85rem;
+  box-shadow: 0 2px 6px #142b3a0b;
+}
+
+#meetings > details > summary {
+  padding: .95rem 1.1rem;
+  border-radius: .8rem;
+}
+
+#meetings > details > summary:hover {
+  background: #f1f8f7;
+}
+
+#meetings > details > summary:focus-visible {
+  outline: 2px solid #08736a;
+  outline-offset: 3px;
+}
+
+#meetings > details > summary::marker {
+  color: #08736a;
+}
+
+#meetings > details[open] {
+  border-color: #52a397;
+}
+
+#meetings > details[open] > summary {
+  border-radius: .8rem .8rem 0 0;
+  border-bottom: 1px solid #d6e7e4;
+  background: #edf8f5;
+}
+
+#meetings > details > :not(summary) {
+  margin-inline: 1.1rem;
+}
+
+#meetings > details > table {
+  width: calc(100% - 2.2rem);
+}
+
+#meetings > details > :last-child {
+  margin-bottom: 1rem;
+}
+
+/* Separate the two source columns visually. */
+#meetings > details > table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #d6e1e4;
+  border-radius: .65rem;
+  overflow: hidden;
+  font-size: .875rem;
+}
+
+#meetings th, #meetings td {
+  padding: .6rem clamp(.35rem, 1.5vw, .8rem);
+  border-bottom: 1px solid #e3ecee;
+}
+
+#meetings th {
+  background: #f1f5f7;
+}
+
+#meetings th:first-child {
+  width: 25%;
+}
+
+#meetings th:nth-child(2) {
+  background: #fff2d9;
+  color: #65430b;
+}
+
+#meetings th:nth-child(3) {
+  background: #dff3ee;
+  color: #125a50;
+}
+
+#meetings tbody tr:nth-child(even) {
+  background: #f7fafb;
+}
+
+#meetings tbody tr:last-child td {
+  border-bottom: 0;
+}
